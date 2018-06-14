@@ -1,0 +1,60 @@
+<div class="container-fluid row">
+  <div class="col-lg-12 col-md-12">
+    <h1 class="headin-g">Slider App </h1>
+    <input type="button" class="btn btn-primary bton" (click)="switchFilter()" [value]="sliderDisabled ? 'Enable Slider' : 'Show All Members'" /> 
+    <div class="scroller"><nouislider [min]="min" [max]="max" [step]="1" [(ngModel)]="initialVal" (ngModelChange)="onChange($event)" [disabled]="sliderDisabled"></nouislider>
+    <span class="actve">Active</span><span class="expired">Expired</span><span class="future">Future</span>
+    
+    </div>
+
+<div class="card eachCard" *ngFor="let member of filteredMembers">
+  <div class="card-header">
+    {{member.firstName}}, {{member.lastName}}
+  </div>
+  <div class="card-body" >
+    <!-- <h5 class="card-title"></h5> -->
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <td><b>Member ID </b>: {{member._id}}</td> 
+          <td><b>Gender </b>: {{member.gender}}</td>
+          <td><b>Email</b> : {{member.email}}</td>
+          <td><b>Status</b> : {{member.status}}</td>
+          
+      
+        </tr>
+        <tr>
+          <td><b>Company</b> : {{member.company}}</td>
+          <td> <b>Phone</b> : {{member.phone}}</td>
+          <td colspan="2"><b>Address</b> : {{member.address}}</td>
+          
+        </tr>
+        
+      </tbody>
+    </table>
+    
+
+
+
+
+  </div>
+</div>
+
+<!-- {
+  "_id": "5b2195d1a48b195b571874d7",
+  "index": 4,
+  "age": 38,
+  "eyeColor": "blue",
+  "firstName": "Mcdaniel",
+  "lastName": "Mcintosh",
+  "gender": "male",
+  "company": "KONNECT",
+  "email": "mcdanielmcintosh@konnect.com",
+  "phone": "+1 (988) 465-2060",
+  "address": "817 Vanderbilt Street, Salvo, Indiana, 1779",
+  "status": "Future"
+}, -->
+    
+  </div>
+</div>

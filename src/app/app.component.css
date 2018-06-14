@@ -1,0 +1,25 @@
+.eachCard{
+    margin: 5px auto;
+}
+.scroller{
+    width: 50%;
+    margin: auto;
+}
+.future{
+    position: relative;
+    left: 80%;
+}
+.expired{
+    position: relative;
+    left: 40%;
+}
+.actve{
+    position: relative;
+    left: -1%;
+}
+.headin-g{
+    text-align: center;
+}
+.bton{
+    margin: auto;
+}
